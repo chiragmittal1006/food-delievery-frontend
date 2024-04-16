@@ -11,6 +11,7 @@ function Dashboard() {
   const [category, setcategory] = useState("");
   const [image, setimage] = useState("");
   const [customer, setcustormer] = useState([]);
+  const [loader, setloader] = useState(false)
 
   const { food } = useContext(storeContext);
   // console.log(food)
@@ -83,14 +84,13 @@ function Dashboard() {
     }
 }
 
-
   useEffect(() => {
     showAllCustomer();
   }, []); // Empty dependency array to run once on component mount
 
   return (
     <div style={{ padding: "0px 3vw" }}>
-      <form onSubmit={HandleFormSubmit} className="dashboard-form">
+      <form onSubmit={(e) => {HandleFormSubmit(e) ; setloader(true)}} className="dashboard-form">
         <input
           required
           type="text"
@@ -135,18 +135,19 @@ function Dashboard() {
           onChange={handleImageChange}
           className="dashboard-image"
         />
-        <button type="submit">Submit</button>
+        {loader === false ?<button type="submit">Submit</button> : <></>}
       </form>
 
+
+      <h1 id="dashboard-h1">Orders</h1>
       <hr />
       {customer.map((e, index) => (
         <div key={index} >
         <div className="dashboard-customer">
-          <div>
-            {e.firstname} {e.lastname}, {e.email}, {e.state}, {e.street},{" "}
-            {e.city}, {e.pincode}, {e.country}
+          <div className="dashboard-customer-1">
+            {e.firstname} {e.lastname},<br /> {e.email},<br /> {e.phone},<br /> {e.state},<br /> {e.street},<br /> {e.city},<br /> {e.pincode},<br /> {e.country}
           </div>
-          <div>
+          <div className="dashboard-customer-2">
             {food.map((elem) => {
               return (
                 e.cart &&

@@ -36,4 +36,27 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    gap: 1rem;
+}
+
+.dashboard-customer-1{
+    width: 45%;
+    text-align: left;
+    overflow-x: scroll;
+}
+
+.dashboard-customer-2{
+    width: 45%;
+    overflow-x: scroll;
+    text-align: left;
+}
+
+.dashboard-customer-1::-webkit-scrollbar , .dashboard-customer-2::-webkit-scrollbar{
+    display: none;
+}
+
+#dashboard-h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
 }

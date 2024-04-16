@@ -50,13 +50,9 @@ function Navbar({ setloginpopup }) {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        {localStorage.getItem("isAdmin") === "true" ? (
-          <img src={assets.logo} alt="" />
-        ) : (
           <Link to={"/"}>
             <img src={assets.logo} alt="" />
           </Link>
-        )}
       </div>
       {localStorage.getItem("isAdmin") === "true" ? (
         <></>
@@ -117,8 +113,8 @@ function Navbar({ setloginpopup }) {
           </button>
         )}
         {localStorage.getItem("isAdmin") === "true" ? (
-          <Link to={"/dashboard"}>
-            <button className="navbar-button">Dashboard</button>
+          <Link to={"/products"}>
+            <button className="navbar-button">Products</button>
           </Link>
         ) : (
           <></>

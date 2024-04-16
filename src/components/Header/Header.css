@@ -40,3 +40,31 @@
     border-radius: 0.7vw;
     font-size: max(1vw, 14px);
 }
+
+@media screen and (max-width:650px) {
+    .header{
+        height: 16rem;
+    }
+    .header-content{
+        width: 80%;
+        animation: fadeIn 1s ease;
+    }
+    .header-content h2{
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+    .header-content p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        color: #fff;
+        margin-bottom: 1vw;
+    }
+    .header-content button{
+        padding: 0.4rem 1.2rem;
+        border: none;
+        background: white;
+        color: #747474;
+        border-radius: 0.7vw;
+        font-size: max(1vw, 1rem);
+    }
+}

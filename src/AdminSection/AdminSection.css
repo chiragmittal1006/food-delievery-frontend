@@ -1,0 +1,168 @@
+.AdminSection{
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw;
+    width: 100vw;
+}
+
+.AdminSection-1{
+    width: 100%;
+}
+
+.AdminSection-1 ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1vw 0px;
+}
+
+.AdminSection-1 ul li{
+    width: calc(100%/6);
+    margin: 0px 4px;
+    text-align: center;
+}
+
+.AdminSection-display{
+    width: 100%;
+}
+
+.AdminSectionItemDetails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.AdminSectionItemDetails #AdminSection-image1{
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminSectionItemDetails #AdminSection-image2{
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminSectionItemDetails #AdminSection-image1 img{
+    height: 3vw;
+    width: 3vw;
+    object-fit: cover;
+}
+
+.AdminSectionItemDetails p{
+    width: calc(100%/6);
+    text-align: center;
+}
+
+.AdminSection-2{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 4vw;
+}
+
+.AdminSection2-left{
+    width: 35%;
+}
+
+.AdminSection2-left h2{
+    padding-bottom: 1vw;
+}
+
+.AdminSection2-left-subtotal{
+    padding: 1vw 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AdminSection2-left-delievery{
+    padding: 1vw 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AdminSection2-left button{
+    padding: 0.8rem;
+    width: 100%;
+    background: tomato;
+    border: none;
+}
+
+.AdminSection2-right{
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+}
+
+.AdminSection2-right p{
+    font-size: 1rem;
+    margin-bottom: 1vw;
+}
+
+.AdminSection-last-div{
+    width: 70%;
+}
+
+.AdminSection-last-div input{
+    padding: 0.6rem;
+    width: 100%;
+}
+
+.AdminSection-last-div button{
+    background: black;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    .AdminSectionItemDetails #AdminSection-image1 img{
+        height: 2rem;
+        width: 2rem;
+        object-fit: cover;
+    }
+
+    .AdminSection-2{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .AdminSection2-left{
+        width: 100%;
+    }
+
+    .AdminSection2-left p{
+        padding: 0.5rem 0px;
+    }
+
+    .AdminSection2-left h4{
+        padding: 0.5rem 0px;
+    }
+
+    .AdminSection2-left button{
+        font-size: 1rem;
+    }
+
+    .AdminSection2-right{
+        width: 100%;
+        gap: 1rem;
+    }
+}

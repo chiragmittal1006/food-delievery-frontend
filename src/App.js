@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import { useState } from 'react';
 import LoginSignUp from './components/LoginSignUp/LoginSignUp';
+import AdminSection from './AdminSection/AdminSection';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='/' element = {<Dashboard/>}/>
           <Route exact path='/cart' element = {<Dashboard/>}/>
           <Route exact path='/order' element = {<Dashboard/>}/>
+          <Route exact path='/products' element = {<AdminSection/>}/>
           </>
           : <></>}
           <Route exact path='/' element = {<Home/>}/>

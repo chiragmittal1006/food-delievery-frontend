@@ -1,4 +1,6 @@
 .navbar{
+    width: 100vw;
+    overflow-x: hidden;
     padding: 2rem 3vw;
     display: flex;
     align-items: center;
@@ -35,11 +37,11 @@
 
 .navbar-right button{
     background: pink;
-    padding: 0.8vw 1.4vw;
+    padding: 0.8rem 1.4rem;
     border: 1px solid #555;
     background: transparent;
     border-radius: 10px;
-    font-size: 1vw;
+    font-size: 0.8rem;
     transition: 0.2s ease;
 }
 
