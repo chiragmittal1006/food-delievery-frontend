@@ -1,0 +1,42 @@
+.header{
+    height: 30vw;
+    margin: 2.5vw 3vw;
+    background-image: url(../../assets/header_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0px 0px 2vw 3vw;
+}
+
+.header-content{
+    width: 60%;
+    animation: fadeIn 1s ease;
+}
+
+.header-content h2{
+    font-size: 3vw;
+    line-height: 5vw;
+    color: #fff;
+    margin-bottom: 1vw;
+}
+
+.header-content p{
+    font-size: 1.3vw;
+    line-height: 1.8vw;
+    color: #fff;
+    margin-bottom: 1vw;
+}
+
+.header-content button{
+    padding: 0.8vw 1.6vw;
+    border: none;
+    background: white;
+    color: #747474;
+    border-radius: 0.7vw;
+    font-size: max(1vw, 14px);
+}

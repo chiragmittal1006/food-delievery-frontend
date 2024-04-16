@@ -1,0 +1,51 @@
+.place{
+    padding: 5vw 3vw;
+}
+
+.place-order-form{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.place-left{
+    width: 40%;
+}
+
+.place-left h1{
+    font-size: 2rem;
+    padding: max(1vw , 10px) 0px;
+}
+
+.place-left-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.place-left-name input{
+    width: 48%;
+    padding: 0.5rem;
+}
+
+.place-left-full{
+    margin-top: 1rem;
+}
+
+.place-left-full input{
+    width: 100%;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .place-order-form{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .place-left{
+        width: 100%;
+    }
+}

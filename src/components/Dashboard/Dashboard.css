@@ -1,0 +1,39 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dashboard-form{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.dashboard-form input ,.dashboard-form select{
+    padding: 0.6rem 0.8rem;
+    width: 50%;
+    margin: 1rem 0px;
+}
+
+.dashboard-form button{
+    padding: 0.6rem 2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid black;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:950px) {
+    .dashboard-form input ,.dashboard-form select{
+        width: 100%;
+    }
+}
+
+.dashboard-customer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}

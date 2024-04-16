@@ -1,0 +1,166 @@
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw;
+    width: 100vw;
+}
+
+.cart-1{
+    width: 100%;
+}
+
+.cart-1 ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1vw 0px;
+}
+
+.cart-1 ul li{
+    width: calc(100%/6);
+    margin: 0px 4px;
+    text-align: center;
+}
+
+.cart-display{
+    width: 100%;
+}
+
+.cartItemDetails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.cartItemDetails #cart-image1{
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItemDetails #cart-image2{
+    width: calc(100%/6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartItemDetails #cart-image1 img{
+    height: 3vw;
+    width: 3vw;
+    object-fit: cover;
+}
+
+.cartItemDetails p{
+    width: calc(100%/6);
+    text-align: center;
+}
+
+.cart-2{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 4vw;
+}
+
+.cart2-left{
+    width: 35%;
+}
+
+.cart2-left h2{
+    padding-bottom: 1vw;
+}
+
+.cart2-left-subtotal{
+    padding: 1vw 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart2-left-delievery{
+    padding: 1vw 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart2-left button{
+    padding: 0.8rem;
+    width: 100%;
+    background: tomato;
+    border: none;
+}
+
+.cart2-right{
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cart2-right p{
+    font-size: 1rem;
+    margin-bottom: 1vw;
+}
+
+.cart-last-div{
+    width: 70%;
+}
+
+.cart-last-div input{
+    padding: 0.6rem;
+    width: 100%;
+}
+
+.cart-last-div button{
+    background: black;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    .cartItemDetails #cart-image1 img{
+        height: 2rem;
+        width: 2rem;
+        object-fit: cover;
+    }
+
+    .cart-2{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .cart2-left{
+        width: 100%;
+    }
+
+    .cart2-left p{
+        padding: 0.5rem 0px;
+    }
+
+    .cart2-left h4{
+        padding: 0.5rem 0px;
+    }
+
+    .cart2-left button{
+        font-size: 1rem;
+    }
+
+    .cart2-right{
+        width: 100%;
+        gap: 1rem;
+    }
+}
