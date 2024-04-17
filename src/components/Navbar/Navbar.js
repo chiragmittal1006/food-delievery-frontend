@@ -34,12 +34,17 @@ function Navbar({ setloginpopup }) {
           }
         })
         .catch((error) => {
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("refreshToken");
+          localStorage.removeItem("isAdmin");
           console.error("Logout failed:", error);
+          window.location.replace("/")
           // Optionally, display an error message to the user
         });
     } catch (error) {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
+      localStorage.removeItem("isAdmin");
       window.location.replace("/");
       console.error("Error during logout:", error);
 
