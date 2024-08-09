@@ -14,7 +14,7 @@ function LoginSignUp({ setloginpopup , isAdmin , setisAdmin }) {
     console.log(username, email, password);
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/register",
+        `${process.env.REACT_APP_BACKEND_URL}api/v1/users/register`,
         { username, email, password }
       );
       console.log("User registered successfully:", response.data);
@@ -32,7 +32,7 @@ function LoginSignUp({ setloginpopup , isAdmin , setisAdmin }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/users/login",
+        `${process.env.REACT_APP_BACKEND_URL}api/v1/users/login`,
         { username, password },
         { withCredentials: true }
       );

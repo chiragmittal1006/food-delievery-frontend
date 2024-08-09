@@ -14,7 +14,7 @@ function Navbar({ setloginpopup }) {
     try {
       // Send a GET request to the logout endpoint
       axios
-        .get("http://localhost:8000/api/v1/users/logout", {
+        .get(`${process.env.REACT_APP_BACKEND_URL}api/v1/users/logout`, {
           withCredentials: true,
         })
         .then((response) => {

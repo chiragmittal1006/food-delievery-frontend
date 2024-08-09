@@ -11,7 +11,7 @@ function Cart() {
   const HandleCartSubmit = async () => {
     try {
       const response = await axios.patch(
-        "http://localhost:8000/api/v1/users/add-to-cart",
+        `${process.env.REACT_APP_BACKEND_URL}api/v1/users/add-to-cart`,
         {
           cart: cartitem,
         },

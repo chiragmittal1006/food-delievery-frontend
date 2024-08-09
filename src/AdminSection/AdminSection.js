@@ -7,7 +7,7 @@ function AdminSection() {
 
     const fetchingAllFoodList = async () => {
         try {
-          const response = await axios.get("http://localhost:8000/api/v1/product/all-products");
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/v1/product/all-products`);
           setfood(response.data.data);
         } catch (error) {
           console.error("Error fetching food list:", error);
@@ -19,7 +19,7 @@ function AdminSection() {
 
     const RemoveProduct = async (id) => {
         try {
-            await axios.delete("http://localhost:8000/api/v1/product/delete-product", {
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}api/v1/product/delete-product`, {
                 data: { productId: id },
                 withCredentials: true
             });

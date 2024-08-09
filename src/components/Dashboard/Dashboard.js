@@ -37,7 +37,7 @@ function Dashboard() {
     try {
       // Send the form data to the backend
       await axios.post(
-        "http://localhost:8000/api/v1/product/add-product",
+        `${process.env.REACT_APP_BACKEND_URL}api/v1/product/add-product`,
         formData,
         { withCredentials: true },
         {
@@ -60,7 +60,7 @@ function Dashboard() {
 
   const showAllCustomer = async () => {
     const response = await axios.get(
-      "http://localhost:8000/api/v1/customer/get-all-customer",
+      `${process.env.REACT_APP_BACKEND_URL}api/v1/customer/get-all-customer`,
       { withCredentials: true }
     );
 
@@ -69,10 +69,11 @@ function Dashboard() {
 
   const RemoveCustomer = async (id) => {
     try {
-        await axios.delete("http://localhost:8000/api/v1/customer/remove-customer", {
+        await axios.delete(`${process.env.REACT_APP_BACKEND_URL}api/v1/customer/remove-customer`, {
             data: { customerId: id },
             withCredentials: true
         });
+        alert("product has been removed")
         showAllCustomer();
     } catch (error) {
         localStorage.removeItem("accessToken");
