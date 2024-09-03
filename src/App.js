@@ -10,36 +10,53 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import LoginSignUp from './components/LoginSignUp/LoginSignUp';
 import AdminSection from './AdminSection/AdminSection';
+import Loader from './components/Loader/Loader';
 
 function App() {
 
   const [loginpopup, setloginpopup] = useState(false)
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000); // Extend the preloader duration
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Router>
+      {loading ? (
+        <Loader /> // Use the Loader component here
+      ) : (
+        <Router>
+          {loginpopup && <LoginSignUp setloginpopup={setloginpopup} />}
+          <Navbar setloginpopup={setloginpopup} />
 
-      {loginpopup? <LoginSignUp setloginpopup={setloginpopup} />: <></>}
-      <Navbar setloginpopup={setloginpopup}/>
-
-      <Routes>
-          {localStorage.getItem("isAdmin") === "true" ? 
-          <>
-          <Route exact path='/' element = {<Dashboard/>}/>
-          <Route exact path='/cart' element = {<Dashboard/>}/>
-          <Route exact path='/order' element = {<Dashboard/>}/>
-          <Route exact path='/products' element = {<AdminSection/>}/>
-          </>
-          : <></>}
-          <Route exact path='/' element = {<Home/>}/>
-          <Route exact path='/cart' element = {<Cart/>}/>
-          <Route exact path='/order' element = {<PlaceOrder/>}/>
-      </Routes>
-      <Footer/>
-      </Router>
+          <Routes>
+            {localStorage.getItem("isAdmin") === "true" ? (
+              <>
+                <Route exact path='/' element={<Dashboard />} />
+                <Route exact path='/cart' element={<Dashboard />} />
+                <Route exact path='/order' element={<Dashboard />} />
+                <Route exact path='/products' element={<AdminSection />} />
+              </>
+            ) : (
+              <>
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/cart' element={<Cart />} />
+                <Route exact path='/order' element={<PlaceOrder />} />
+              </>
+            )}
+          </Routes>
+          <Footer />
+        </Router>
+      )}
     </>
   );
 }

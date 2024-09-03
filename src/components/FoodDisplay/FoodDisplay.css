@@ -16,3 +16,100 @@
     gap: 2vw;
     overflow-x: hidden;
 }
+
+/* Base styles for skeleton loader */
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Skeleton Loader Specific Styles */
+.fooditem-skeleton {
+    width: calc(88vw/4);
+    padding: 1vw;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #00000015;
+    animation: fadeIn 1s;
+    transition: all ease 0.3s;
+}
+
+@media screen and (max-width: 1000px) {
+    .fooditem-skeleton {
+        width: calc(90vw/3);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .fooditem-skeleton {
+        width: calc(92vw/2);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .fooditem-skeleton {
+        width: 100%;
+    }
+}
+
+.fooditem-image-skeleton {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fooditem-name-skeleton {
+    height: 20px;
+    width: 70%;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.fooditem-rating-skeleton {
+    height: 12px;
+    width: 50px;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.fooditem-description-skeleton {
+    height: 40px;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.fooditem-price-skeleton {
+    height: 20px;
+    width: 40%;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}

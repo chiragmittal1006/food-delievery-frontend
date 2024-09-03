@@ -1,0 +1,122 @@
+/* .loader {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+  }
+
+.loader p {
+    transform: translateX(40px);
+    opacity: 0;
+    animation: slide-in 1s forwards, slide-out 1s 1s forwards;
+  }
+  
+  @keyframes slide-in {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-out {
+    to {
+      transform: translateX(-40px);
+      opacity: 0;
+    }
+  }
+  
+  .loader.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .loader.hidden {
+    display: none;
+  }
+   */
+
+@keyframes loaderSlideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes loaderSlideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff6347, #ff4500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  animation: loaderSlideIn 1.5s ease-in-out forwards,
+    loaderSlideOut 1.5s ease-in-out 2.5s forwards;
+}
+
+.loader-leaf {
+  width: 100px;
+  height: 150px;
+  background: linear-gradient(135deg, #32cd32, #008000);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  animation: rotateLeaf 4s infinite linear;
+  transform-origin: center center;
+}
+
+@keyframes rotateLeaf {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-fade {
+  animation: fadeOut 1s ease-in-out 4s forwards;
+}
